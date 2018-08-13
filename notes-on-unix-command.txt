@@ -58,7 +58,6 @@ zcat
 
 --for loop
 1.
-
 for i in 1 2 3 4 5
 do
 	echo ${i}
@@ -88,3 +87,37 @@ do
 	echo ${i}
 done
 
+--if
+
+if [ $? -eq 0]
+then
+	echo "Successful!!"
+fi
+
+--if-else
+
+if [ $? -eq 0]
+then
+	echo "Successful!!"
+else
+	echo "Failed!!"
+	exit 1
+fi
+
+--if-elif-else
+
+a=10
+b=20
+
+if [ ${a} == ${b} ]
+then
+   echo "a is equal to b"
+elif [ ${a} -gt ${b} ]
+then
+   echo "a is greater than b"
+elif [ ${a} -lt ${b} ]
+then
+   echo "a is less than b"
+else
+   echo "None of the condition met"
+fi
