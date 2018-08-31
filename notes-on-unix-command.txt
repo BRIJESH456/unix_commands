@@ -6,7 +6,28 @@ cp
 rm
 mv
 more
-grep 
+grep :
+1. Case insensitive search
+grep -i "UNix" test.txt
+
+2. Displaying the count of number of matches
+grep -c "unix" test.txt
+
+3. Display the file names that matches the pattern
+grep -l "unix" *
+
+4. Checking for the whole words in a file
+grep -w "unix" test.txt
+
+5. Show line number while displaying the output
+grep -n "unix" test.txt
+
+6. Takes patterns from file
+grep –f pattern.txt  test.txt
+
+7. Search a string in Gzipped Files
+zgrep –i error /var/log/syslog.2.gz
+
 chmod 
 ps 
 kill 
