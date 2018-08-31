@@ -55,6 +55,36 @@ touch
 tr
 uniq
 zcat	
+sed :
+1. Viewing a range of lines of a document
+sed -n '5,10p' test.txt
+
+2. Viewing the entire file except a given range
+sed '20,35d' test.txt
+
+3. Viewing non-consecutive lines and ranges
+sed -n -e '5,7p' -e '10,13p' test.txt
+
+4. Replacing words or character
+sed 's/version/story/g' test.txt
+sed 's/version/story/gi' test.txt
+
+5. Replacing words or characters inside a range
+sed '30,40 s/version/story/g' test.txt
+
+6. Performing two or more substitutions at once
+sed -i 's/that/this/gi;s/line/verse/gi' test.txt
+
+7. Replacing the nth occurrence of a pattern in a line
+sed 's/unix/linux/2' test.txt
+
+8. Replacing from nth occurrence to all occurrences in a line
+sed 's/unix/linux/3g' test.txt
+
+9. Duplicating the replaced line with /p flag
+sed 's/unix/linux/p' test.txt
+sed -n 's/unix/linux/p' test.txt
+
 
 --for loop
 1.
